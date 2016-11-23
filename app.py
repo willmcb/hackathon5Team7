@@ -60,11 +60,16 @@ def send_bootstrap(path):
 
 @app.route('/')
 def search_html():
-    # ff = os.path.join(PWD, 'searchPage.html')
     return render_template('searchPage.html')
 
 
-api.add_resource(Adaptor, '/search')
+@app.route('/dashboard')
+def dashboard():
+    # ff = os.path.join(PWD, 'searchPage.html')
+    return render_template('dashboardPage.html')
+
+
+api.add_resource(Adaptor, '/api')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
