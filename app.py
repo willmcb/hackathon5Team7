@@ -32,9 +32,9 @@ class Adaptor(Resource):
                 CLAIMS_ENDPOINT + '&search=' + args.caseNumber).json()
             print(data)
             item = data['items'][0]
-            case_number = item['case_number']
-            if case_number != args.caseNumber:
-                raise Exception
+            # case_number = item['case_number']
+            # if case_number != args.caseNumber:
+                # raise Exception
             uuid = item['uuid']
             url = CLAIM_ENDPOINT + '/' + uuid + '?api_key={}'.format(KEY)
             result = requests.get(url).json()
@@ -67,6 +67,12 @@ def search_html():
 def dashboard():
     # ff = os.path.join(PWD, 'searchPage.html')
     return render_template('dashboardPage.html')
+
+
+@app.route('/data')
+def data():
+    # ff = os.path.join(PWD, 'searchPage.html')
+    return render_template('data.html')
 
 
 api.add_resource(Adaptor, '/api')

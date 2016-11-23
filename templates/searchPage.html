@@ -14,21 +14,23 @@
 </head>
 
 <body>
-    <div class="comtainer-fluid">
+    <div class="container-fluid">
       <div class="row col-md-4 col-md-offset-4">
+        <img src="/js/logo.gif">
+        <h2>PDS Billing Search Tool</h2>
         <form action="/dashboard" method="get">
             <div class="form-group">
                 <label for="defendantSurname">Case Number</label>
-                <input type="text" class="form-control" name="caseNumber" placeholder="enter surname">
+                <input type="text" class="form-control" name="caseNumber" placeholder="enter case number">
             </div>
 
             <div class="form-group">
-                <label for="defendantSurname">Defendant Surname</label>
-                <input type="text" class="form-control" id="defendantSurname" placeholder="enter surname">
+                <label for="defendantSurname">Defendant Full Name</label>
+                <input type="text" class="form-control" id="defendantSurname" placeholder="enter full name">
             </div>
             <div class="form-group">
                 <label for="nameOfCrownCourt">Name of Crown Court</label>
-                <input type="text" class="form-control" id="nameOfCrownCourt" placeholder="enter surname">
+                <input type="text" class="form-control" id="nameOfCrownCourt" placeholder="enter court name">
             </div>
 
             <button type="submit" class="btn btn-primary">Search</button>
